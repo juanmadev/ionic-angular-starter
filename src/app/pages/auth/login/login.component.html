@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login Header
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="login()" [formGroup]="form">
+    <ion-item lines="full">
+      <ion-label position="floating">
+        Usuario
+      </ion-label>
+      <ion-input formControlName="email" type="text">
+      </ion-input>
+      <ion-icon name="person" size="large" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">
+        Contraseña
+      </ion-label>
+      <ion-input formControlName="password" type="password">
+      </ion-input>
+      <ion-icon name="unlock" size="large" slot="start"></ion-icon>
+    </ion-item>
+    <ion-button [disabled]="!isFormValid" type="submit" expand="full">
+      INICIAR SESIÓN
+    </ion-button>
+  </form>
+</ion-content>
